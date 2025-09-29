@@ -1,9 +1,39 @@
 import { GrapheneLogo } from "@/components/LogoProvider";
 import Link from "next/link";
-import fetchCurrentGitCommit from "@/lib/GitCommitFetcher";
+import fetchBranchAndCommit from "@/lib/GitCommitFetcher";
 
 const FooterBrand = () => {
-  const gitCommit = fetchCurrentGitCommit();
+  const branchAndCommit = fetchBranchAndCommit();
+  const branch = branchAndCommit.branch;
+  const commit = branchAndCommit.commit;
+  const repoUrl = "https://github.com/Runkang10/portfolio/tree/" + branch;
+  const repoCommitUrl =
+    "https://github.com/Runkang10/portfolio/commit/" + commit;
+
+  const links = [
+    {
+      key: "repo",
+      element: (
+        <>
+          <span>Repository: </span>
+          <Link href={repoUrl} className="text-chart-1 hover:underline">
+            Runkang10/portfolio
+          </Link>
+        </>
+      ),
+    },
+    {
+      key: "commit",
+      element: (
+        <>
+          <span>Commit: </span>
+          <Link href={repoCommitUrl} className="text-chart-1 hover:underline">
+            {branch}@{commit.slice(0, 6)}
+          </Link>
+        </>
+      ),
+    },
+  ];
 
   return (
     <div className="flex flex-col gap-3">
@@ -18,12 +48,11 @@ const FooterBrand = () => {
         <span className="text-sm text-muted-foreground">
           This portfolio is open source.
         </span>
-        <span className="text-sm text-muted-foreground">
-          <Link href={"#"} className="hover:underline">
-            main@{gitCommit}
-          </Link>
-          <span className="ml-1">(Not implemented).</span>
-        </span>
+        {links.map((link) => (
+          <span className="text-sm text-muted-foreground" key={link.key}>
+            {link.element}
+          </span>
+        ))}
       </div>
     </div>
   );
