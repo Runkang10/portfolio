@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/templates/button";
 import { useState } from "react";
-import { links, LinkType } from "@/config/Links";
+import { linksConfig, LinkType } from "@/config/LinksConfig";
 import { useRouter } from "next/navigation";
 import {
   Select,
@@ -13,7 +13,7 @@ import {
 import { House } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const SelectPageButton = () => {
+const PrimaryLinks = () => {
   const router = useRouter();
   const linksList: LinkType[] = [
     {
@@ -21,7 +21,7 @@ const SelectPageButton = () => {
       url: "/",
       icon: <House className="max-w-4 max-h-4 sm:max-w-5 sm:max-h-5" />,
     },
-    ...links,
+    ...linksConfig,
   ];
 
   const [redirectPage, setRedirectPage] = useState<LinkType>(linksList[0]);
@@ -41,7 +41,7 @@ const SelectPageButton = () => {
       </Button>
       <Select
         onValueChange={(value) => {
-          const result = links.find((link) => link.label === value);
+          const result = linksConfig.find((link) => link.label === value);
           if (result) setRedirectPage(result);
         }}
       >
@@ -49,7 +49,7 @@ const SelectPageButton = () => {
           className={cn(
             "rounded-l-none rounded-r-4xl rounded-y-4xl py-6",
             "!bg-primary hover:!bg-primary/80 hover:!cursor-pointer",
-            "",
+            "!focus:outline-none",
           )}
         />
         <SelectContent>
@@ -65,4 +65,4 @@ const SelectPageButton = () => {
   );
 };
 
-export default SelectPageButton;
+export default PrimaryLinks;
