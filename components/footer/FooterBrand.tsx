@@ -1,6 +1,7 @@
 import { GrapheneLogo } from "@/components/LogoProvider";
 import Link from "next/link";
 import fetchBranchAndCommit from "@/lib/GitCommitFetcher";
+import FooterLink from "@/components/footer/FooterLink";
 
 const FooterBrand = () => {
   const branchAndCommit = fetchBranchAndCommit();
@@ -27,9 +28,9 @@ const FooterBrand = () => {
       element: (
         <>
           <span>Commit: </span>
-          <Link href={repoCommitUrl} className="text-chart-1 hover:underline">
+          <FooterLink href={repoCommitUrl}>
             {branch}@{commit.slice(0, 6)}
-          </Link>
+          </FooterLink>
         </>
       ),
     },

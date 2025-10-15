@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { buttonVariants } from "@/components/templates/button";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { cn } from "@/lib/utils";
 
 const SocialLinkComponent = ({
@@ -9,7 +9,7 @@ const SocialLinkComponent = ({
   alt,
 }: {
   href: string;
-  src: HTMLImageElement;
+  src: StaticImageData;
   alt: string;
 }) => (
   <Link

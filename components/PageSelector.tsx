@@ -13,7 +13,7 @@ import {
 import { House } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const PrimaryLinks = () => {
+const PageSelector = () => {
   const router = useRouter();
   const linksList: LinkType[] = [
     {
@@ -65,4 +65,4 @@ const PrimaryLinks = () => {
   );
 };
 
-export default PrimaryLinks;
+export default PageSelector;

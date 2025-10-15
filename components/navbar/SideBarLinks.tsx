@@ -2,12 +2,12 @@
 
 import { Button } from "@/components/templates/button";
 import { useRouter } from "next/navigation";
-import { links } from "@/config/Links";
+import { linksConfig } from "@/config/LinksConfig";
 
 const SideBarLinks = () => {
   const router = useRouter();
 
-  return links.map((link, idx) => (
+  return linksConfig.map((link, idx) => (
     <div key={idx}>
       <Button
         variant="ghost"

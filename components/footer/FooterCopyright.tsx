@@ -1,7 +1,7 @@
 import getCurrentYear from "@/lib/YearFetcher";
 import FooterLink from "@/components/footer/FooterLink";
 
-const FooterCopyrightConfig = () => (
+const FooterCopyright = () => (
   <span className="text-xs text-muted-foreground">
     © {getCurrentYear()} Runkang10,{" "}
     <FooterLink href="https://github.com/Runkang10/portfolio">
@@ -11,4 +11,4 @@ const FooterCopyrightConfig = () => (
   </span>
 );
 
-export default FooterCopyrightConfig;
+export default FooterCopyright;

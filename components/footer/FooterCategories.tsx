@@ -5,7 +5,7 @@ const FooterCategories = () =>
   footerCategories.map((category) => (
     <div className="flex flex-col gap-3" key={category.label}>
       <span className="font-bold">{category.label}</span>
-      <div className="flex flex-col gap-1 w-max">
+      <div className="flex flex-col gap-1 w-max text-sm">
         {category.items.length <= 0 ? (
           <span className="text-muted-foreground">Nothing to show :p</span>
         ) : (

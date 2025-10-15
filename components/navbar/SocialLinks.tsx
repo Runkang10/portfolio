@@ -7,7 +7,7 @@ const SocialLinks = () =>
       href={socialLink.url}
       key={socialLink.url}
       src={socialLink.icon}
-      alt={socialLink.alt}
+      alt={socialLink.label}
     />
   ));
 
