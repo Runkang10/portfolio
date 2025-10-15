@@ -5,12 +5,12 @@ import { cn } from "@/lib/utils";
 type LinkType = {
   label: string;
   url: string;
-  icon?: ReactElement;
+  icon: ReactElement;
 };
 
 const DEFAULT = cn("max-w-4 max-h-4 sm:max-w-5 sm:max-h-5");
 
-const links: LinkType[] = [
+const linksConfig: LinkType[] = [
   {
     label: "Projects",
     url: "/projects",
@@ -33,4 +33,4 @@ const links: LinkType[] = [
   },
 ];
 
-export { type LinkType, links };
+export { type LinkType, linksConfig };

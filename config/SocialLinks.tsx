@@ -1,22 +1,23 @@
-import Github from "@/public/github.svg";
-import Discord from "@/public/discord.svg";
+import Github from "@/public/social/github.svg";
+import Discord from "@/public/social/discord.svg";
+import { StaticImageData } from "next/image";
 
 type SocialLinkType = {
-  icon: HTMLImageElement;
+  icon: StaticImageData;
   url: string;
-  alt: string;
+  label: string;
 };
 
 const socialLinks: SocialLinkType[] = [
   {
     icon: Github,
     url: "https://github.com/Runkang10",
-    alt: "Github",
+    label: "Github",
   },
   {
     icon: Discord,
     url: "https://example.com",
-    alt: "Discord",
+    label: "Discord",
   },
 ];
 

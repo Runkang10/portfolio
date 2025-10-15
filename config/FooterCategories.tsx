@@ -1,4 +1,4 @@
-import { links } from "@/config/Links";
+import { linksConfig } from "@/config/LinksConfig";
 import { ReactElement } from "react";
 
 type FooterType = {
@@ -17,7 +17,7 @@ const footerCategories: FooterType[] = [
   {
     label: "Links",
     show: true,
-    items: links as FooterItem[],
+    items: linksConfig as FooterItem[],
   },
   {
     label: "Projects",
