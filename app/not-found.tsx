@@ -1,5 +1,5 @@
 import "@/css/globals.css";
-import SelectPageButton from "@/components/SelectPageButton";
+import PageSelector from "@/components/PageSelector";
 
 const page = () => (
   <div className="flex-1 backdrop-blur-xs md:backdrop-blur-none flex items-center justify-center">
@@ -9,7 +9,7 @@ const page = () => (
       <span>Maybe this is what you&#39;re looking for:</span>
       <br className="my-2" />
       <div className="flex items-center justify-center gap-2">
-        <SelectPageButton />
+        <PageSelector />
       </div>
     </div>
   </div>
