@@ -1,12 +1,13 @@
 import Hero from "@/app/(home)/components/Hero";
 import TechStack from "@/app/(home)/components/TechStack";
+import Projects from "@/app/(home)/components/Projects";
 
 function HomePage() {
   return (
-    <div className="flex-1 flex flex-col pb-8">
+    <div className="flex-1 flex flex-col gap-16 pb-16">
       <Hero />
-      <br className="my-4" />
       <TechStack />
+      <Projects />
     </div>
   );
 }
