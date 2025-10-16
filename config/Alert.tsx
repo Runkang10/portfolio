@@ -36,7 +36,7 @@ const alert: AlertType = {
         <div className="flex flex-col sm:flex-row justify-center items-center gap-x-4 gap-y-2">
           <div className="flex justify-center items-center gap-1">
             <Image src={KASAISORA} alt="KasaiSora" />
-            <LinkComponent href="https://youtube.com/@KasaiSora">
+            <LinkComponent href="https://youtube.com/@KasaiSora?sub_confirmation=1">
               Subscribe to KasaiSora :D
             </LinkComponent>
           </div>
