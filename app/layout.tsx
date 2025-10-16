@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import Page from "@/components/Page";
-import { Analytics } from "@vercel/analytics/vue";
+import { Analytics } from "@vercel/analytics/next";
 
 const roboto = Roboto({
   variable: "--font-roboto",
