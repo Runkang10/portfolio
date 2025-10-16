@@ -5,6 +5,7 @@ import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import Page from "@/components/Page";
+import { Analytics } from "@vercel/analytics/vue";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -31,6 +32,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark">
           <Page>{children}</Page>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
