@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
     webpackMemoryOptimizations: true,
   },
   transpilePackages: ["three"],
+  allowedDevOrigins: ["192.168.0.123"],
 };
 
 export default nextConfig;
