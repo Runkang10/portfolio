@@ -10,7 +10,7 @@ const Projects = () => {
       >
         My Projects
       </h2>
-      <div className="w-max grid grid-cols-2 sm:grid-cols-4 justify-center items-center gap-4">
+      <div className="w-max grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-4">
         {Array.from({ length: 4 }).map((_, i) => (
           <div className="flex flex-col space-y-3" key={i}>
             <Skeleton className="h-[96px] w-[192px] rounded-xl" />
