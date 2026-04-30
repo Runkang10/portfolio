@@ -1,3 +1,10 @@
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "I don't have projects right now.",
+}
+
 export default function Page() {
   return (
     <div className="flex flex-1 items-center justify-center">

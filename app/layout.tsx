@@ -2,9 +2,10 @@ import Footer from "@/components/footer/Footer"
 import Nav from "@/components/nav/Nav"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
-import { JetBrains_Mono } from "next/font/google"
 
 import "@/css/globals.css"
+import { Metadata } from "next"
+import { JetBrains_Mono } from "next/font/google"
 import React, { ReactNode } from "react"
 
 const jetbrainsMono = JetBrains_Mono({
@@ -12,6 +13,16 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-mono",
   preload: false,
 })
+
+export const metadata: Metadata = {
+  title: {
+    default: "Runkang10",
+    template: "Runkang10 | %s",
+  },
+  icons: {
+    icon: "/logo-square.svg",
+  },
+}
 
 export default function RootLayout({
   children,

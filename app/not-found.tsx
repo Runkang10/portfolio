@@ -1,4 +1,10 @@
 import { GenericLink } from "@/components/ui/links/GenericLink"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Page Not Found",
+  description: "Seems like this page does not exist.",
+}
 
 export default function NotFound() {
   return (
