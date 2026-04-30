@@ -22,9 +22,9 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", jetbrainsMono.variable)}
+      className={cn("font-mono antialiased", jetbrainsMono.variable)}
     >
-      <body className="flex min-h-screen flex-col font-mono">
+      <body className="flex min-h-screen flex-col">
         <ThemeProvider>
           <Nav />
           <main className="flex min-h-160 flex-1 flex-col">{children}</main>
