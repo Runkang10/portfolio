@@ -9,7 +9,7 @@ const Contacts = [
   {
     label: "chen.runkang10@gmail.com",
     href: "mailto:chen.runkang10@gmail.com",
-    icon: <Mail className="max-h-4.5 max-w-4.5 text-foreground" />,
+    icon: <Mail className="h-auto w-4.5 text-foreground" />,
   },
   {
     label: "Runkang10",
@@ -19,7 +19,7 @@ const Contacts = [
   {
     label: "@runkang10",
     href: "https://discord.com/users/1226628234041626795",
-    icon: <Image src={Discord} alt="" width={18} height={18} />,
+    icon: <Image src={Discord} alt="" className="h-auto w-4.5" />,
   },
 ]
 

@@ -9,7 +9,7 @@ const NavBrand = () => (
         src={LOGO}
         alt=""
         loading="eager"
-        className="max-w-8 transition-all duration-500 group-hover:rotate-90"
+        className="h-auto w-8 transition-all duration-500 group-hover:rotate-90"
       />
       <span className="hidden hover:font-medium lg:block">Runkang10</span>
     </Link>

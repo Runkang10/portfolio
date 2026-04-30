@@ -2,6 +2,7 @@ import { SocialLinks } from "@/components/nav/Links"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
+import Link from "next/link"
 
 const NavSocialLinks = ({
   autoHide,
@@ -18,20 +19,19 @@ const NavSocialLinks = ({
   >
     {SocialLinks.map((link) => (
       <li key={link.href}>
-        <a
+        <Link
           href={link.href}
           className={buttonVariants({ variant: "ghost", size: "icon" })}
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
-            src={link.icon.src}
+            src={link.icon}
             alt={link.alt}
             loading={loadType}
-            width={18}
-            height={18}
+            className="h-auto w-4.5 contain-content"
           />
-        </a>
+        </Link>
       </li>
     ))}
   </ul>
