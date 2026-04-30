@@ -1,3 +1,5 @@
+"use client"
+
 import { Links } from "@/components/nav/Links"
 import { Button } from "@/components/ui/button"
 import {
