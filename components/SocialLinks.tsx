@@ -1,10 +1,10 @@
-import { SocialLinks } from "@/components/nav/Links"
+import { socialLinks } from "@/components/Links"
 import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
 import Link from "next/link"
 
-const NavSocialLinks = ({
+const SocialLinks = ({
   autoHide,
   loadType,
 }: {
@@ -17,7 +17,7 @@ const NavSocialLinks = ({
       "flex-row items-center gap-2"
     )}
   >
-    {SocialLinks.map((link) => (
+    {socialLinks.map((link) => (
       <li key={link.href}>
         <Link
           href={link.href}
@@ -37,4 +37,4 @@ const NavSocialLinks = ({
   </ul>
 )
 
-export default NavSocialLinks
+export default SocialLinks
