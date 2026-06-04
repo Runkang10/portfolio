@@ -1,5 +1,5 @@
 import FooterSection from "@/components/footer/FooterSection"
-import NavSocialLinks from "@/components/nav/NavSocialLinks"
+import SocialLinks from "@/components/SocialLinks"
 import LOGO from "@/public/logo-base.svg"
 import Image from "next/image"
 
@@ -12,7 +12,7 @@ const FooterBaseSection = () => (
     <div className="text-xs text-muted-foreground">
       <p>&#34;This is my 4th attempt to finish a portfolio xd&#34;</p>
       <br />
-      <NavSocialLinks autoHide={false} loadType="eager" />
+      <SocialLinks autoHide={false} loadType="eager" />
     </div>
   </FooterSection>
 )

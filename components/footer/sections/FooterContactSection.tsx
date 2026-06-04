@@ -28,7 +28,12 @@ const FooterContactSection = () => (
     <ul className="flex flex-col gap-2 text-xs">
       {Contacts.map((contact) => (
         <li key={contact.href}>
-          <Link href={contact.href} target="_blank" rel="noopener noreferrer">
+          <Link
+            href={contact.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-max"
+          >
             <div className="flex items-center gap-1 hover:text-muted-foreground">
               {contact.icon}
               {contact.label}
