@@ -1,6 +1,6 @@
 import Footer from "@/components/footer/Footer"
 import Nav from "@/components/nav/Nav"
-import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/components/ThemeProvider"
 import { cn } from "@/lib/utils"
 
 import "@/css/globals.css"
@@ -38,7 +38,9 @@ export default function RootLayout({
       <body className="flex min-h-screen flex-col">
         <ThemeProvider>
           <Nav />
-          <main className="flex min-h-160 flex-1 flex-col">{children}</main>
+          <div className="flex min-h-160 flex-1 flex-col px-8 py-16">
+            {children}
+          </div>
           <Footer />
         </ThemeProvider>
       </body>
