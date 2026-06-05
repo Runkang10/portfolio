@@ -1,37 +1,39 @@
 export default function Page() {
   return (
-    <>
-      <div className="my-32 flex items-center justify-center">
+    <div className="space-y-16">
+      <div className="my-48 flex items-center justify-center">
         <div className="flex flex-col gap-4 text-center">
           <h1 className="text-5xl font-bold">Hi, I'm Runkang10</h1>
-          <p className="text-xl font-semibold text-muted-foreground">
+          <p className="text-lg font-semibold text-muted-foreground">
             Someone who can't finish a project...
           </p>
         </div>
       </div>
       <div className="flex flex-col gap-6">
-        <h2 className="text-center text-2xl font-bold">Tech stacks</h2>
+        <h2 className="text-left text-2xl font-bold sm:text-center">
+          Tech stacks
+        </h2>
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-          <Section title="Kotlin" elements={["Paper API", "JDA"]} />
-          <Section
+          <TechStack title="Kotlin" elements={["Paper API", "JDA"]} />
+          <TechStack
             title="TypeScript"
             elements={["HTML/CSS/JS", "Next.js", "Tailwind CSS"]}
           />
-          <Section title="Go" elements={["Disgo"]} />
+          <TechStack title="Go" elements={["Disgo"]} />
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
-const Section = ({
+const TechStack = ({
   title,
   elements,
 }: {
   title: string
   elements: string[]
 }) => (
-  <div className="flex justify-center">
+  <div className="flex justify-start md:justify-center">
     <div className="flex flex-col gap-2">
       <h3 className="text-lg font-medium">{title}</h3>
       <ul className="space-y-1 text-sm">
