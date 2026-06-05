@@ -4,7 +4,7 @@ import FooterProjectsSection from "@/components/footer/sections/FooterProjectsSe
 import { GenericLink } from "@/components/ui/links/GenericLink"
 
 const Footer = () => (
-  <footer className="flex flex-col gap-y-8 border-t px-8 pt-8 pb-4">
+  <footer className="flex flex-col gap-y-8 border-t bg-background px-8 pt-8 pb-4">
     <div className="grid gap-10 gap-y-12 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
       <FooterBaseSection />
       <FooterProjectsSection />
