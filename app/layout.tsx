@@ -41,7 +41,7 @@ export default function RootLayout({
             className="absolute inset-0 -z-10 min-h-full"
             style={{
               backgroundImage:
-                "radial-gradient(circle, var(--border) 1px, transparent 1px)",
+                "radial-gradient(circle, var(--border) 2px, transparent 2px)",
               backgroundSize: "40px 40px",
             }}
           />
