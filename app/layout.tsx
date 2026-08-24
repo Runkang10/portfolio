@@ -37,14 +37,6 @@ export default function RootLayout({
     >
       <body className="relative flex min-h-screen flex-col">
         <ThemeProvider>
-          <div
-            className="absolute inset-0 -z-10 min-h-full"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle, var(--border) 2px, transparent 2px)",
-              backgroundSize: "40px 40px",
-            }}
-          />
           <Nav />
           <div className="flex min-h-160 flex-1 flex-col px-8 py-16">
             {children}
