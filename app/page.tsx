@@ -3,9 +3,14 @@ export default function Page() {
     <div className="space-y-16">
       <div className="my-48 flex items-center justify-center">
         <div className="flex flex-col gap-4 text-center">
-          <h1 className="text-5xl font-bold">Hi, I'm Runkang10</h1>
+          <h1
+            className="text-5xl font-bold"
+            style={{ textShadow: "0 4px 8px var(--foreground)" }}
+          >
+            Hi, I'm Runkang10
+          </h1>
           <p className="text-lg font-semibold text-muted-foreground">
-            Someone who can't finish a project...
+            A carbon developer... Don't even know what else to put :/
           </p>
         </div>
       </div>
@@ -17,7 +22,7 @@ export default function Page() {
           <TechStack title="Kotlin" elements={["Paper API", "JDA"]} />
           <TechStack
             title="TypeScript"
-            elements={["HTML/CSS/JS", "Next.js", "Tailwind CSS"]}
+            elements={["HTML/CSS/JS", "Astro.js", "Next.js", "Tailwind CSS"]}
           />
           <TechStack title="Go" elements={["Disgo"]} />
         </div>
