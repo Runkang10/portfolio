@@ -21,10 +21,12 @@ async function getModrinthProjects(): Promise<ModrinthProject[]> {
     if (!res.ok) return []
 
     const data: any[] = await res.json()
-    return data.map((project) => ({
-      title: project.title,
-      slug: project.slug,
-    }))
+    return data
+      .filter((project) => project.project_type === "mod")
+      .map((project) => ({
+        title: project.title,
+        slug: project.slug,
+      }))
   } catch (_) {
     return []
   }
