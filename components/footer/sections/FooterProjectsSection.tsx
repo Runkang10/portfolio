@@ -23,10 +23,11 @@ async function getModrinthProjects(): Promise<ModrinthProject[]> {
     const data: any[] = await res.json()
     return data
       .filter((project) => project.project_type === "mod")
-      .map((project) => ({
+      .map((project): { title: string; slug: string } => ({
         title: project.title,
         slug: project.slug,
       }))
+      .sort((a, b) => a.title.localeCompare(b.title))
   } catch (_) {
     return []
   }
