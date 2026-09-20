@@ -23,6 +23,14 @@ export const metadata: Metadata = {
   icons: {
     icon: "/logo-square.svg",
   },
+  openGraph: {
+    title: {
+      default: "Runkang10",
+      template: "Runkang10 | %s",
+    },
+    description: "Hi, I'm Runkang10!",
+    images: "logo-square.svg",
+  },
 }
 
 export default async function RootLayout({
