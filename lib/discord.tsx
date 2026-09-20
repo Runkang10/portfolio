@@ -1,7 +1,7 @@
 import { getModrinthProjects } from "@/lib/projects"
 
-const template = [
-  {
+const template = {
+  component: {
     type: 17,
     accent_color: null,
     spoiler: false,
@@ -70,14 +70,14 @@ const template = [
       },
     ],
   },
-]
+}
 
 const DiscordEmbed = async () => {
   const generated = structuredClone(template)
   const projects = (await getModrinthProjects())
     .map((project) => `- [${project.title}](${project.href})`)
     .join("\n")
-  generated[0].components[2].content +=
+  generated.component.components[2].content +=
     projects.length > 0 ? projects : "_I'm still projectless..._"
 
   return (
