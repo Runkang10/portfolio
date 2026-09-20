@@ -1,6 +1,7 @@
 import Footer from "@/components/footer/Footer"
 import Nav from "@/components/nav/Nav"
 import { ThemeProvider } from "@/components/ThemeProvider"
+import { DiscordEmbed } from "@/lib/discord"
 import { cn } from "@/lib/utils"
 
 import "@/css/globals.css"
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: ReactNode
@@ -35,6 +36,9 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("font-mono antialiased", jetbrainsMono.variable)}
     >
+      <head>
+        <DiscordEmbed />
+      </head>
       <body className="relative flex min-h-screen flex-col">
         <ThemeProvider>
           <Nav />
