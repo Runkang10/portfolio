@@ -11,8 +11,8 @@ const template = {
         accessory: {
           type: 11,
           media: {
-            url: "https://runkang10.is-a.dev/logo-circle.svg",
-            proxy_url: "https://runkang10.is-a.dev/logo-circle.svg",
+            url: "https://runkang10.is-a.dev/logo-square.svg",
+            proxy_url: "https://runkang10.is-a.dev/logo-square.svg",
           },
           description: null,
           spoiler: false,
