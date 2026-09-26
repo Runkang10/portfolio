@@ -7,8 +7,8 @@ const DesktopLink = ({ href, children }: { href: string; children: ReactNode }) 
   </Link>
 )
 
-const MobileLink = ({ href, children }: { href: string; children: ReactNode }) => (
-  <Link href={href} className="active:text-muted-foreground">
+const MobileLink = ({ href, children, ...props }: { href: string; children: ReactNode }) => (
+  <Link href={href} className="active:text-muted-foreground" {...props}>
     {children}
   </Link>
 )

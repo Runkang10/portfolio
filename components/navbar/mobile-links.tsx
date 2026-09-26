@@ -6,6 +6,7 @@ import { ThemeButton } from "@/components/theme-provider"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetFooter,
   SheetHeader,
@@ -31,7 +32,10 @@ const MobileLinks = () => (
       <ul className="flex flex-col px-6">
         {NavigationLinks.map((link) => (
           <li key={link.href}>
-            <MobileLink href={link.href}>{link.label}</MobileLink>
+            <SheetClose
+              render={<MobileLink href={link.href}>{link.label}</MobileLink>}
+              nativeButton={false}
+            />
           </li>
         ))}
       </ul>
