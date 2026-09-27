@@ -88,7 +88,7 @@ function generateProjectsDiscordMetadata() {
     const links = project.links.map((link) => `[${link.content}](${link.href})`).join("\n")
     return `\n## ${project.name}\n${project.description}\n### Links\n${links}`
   })
-  snapshot.component.components[2].content = projectsTemplateContent.replace(
+  snapshot.component.components[0].content = projectsTemplateContent.replace(
     "{{ projects }}",
     formattedProjectsContent.join("\n"),
   )
