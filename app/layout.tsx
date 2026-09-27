@@ -1,6 +1,7 @@
 import { Footer } from "@/components/footer/footer"
 import { Navbar } from "@/components/navbar/navbar"
 import { ThemeProvider } from "@/components/theme-provider"
+import { generateDiscordMetadata } from "@/lib/discord"
 import { DESCRIPTION } from "@/lib/seo"
 import { cn } from "cn"
 import { Metadata } from "next"
@@ -33,6 +34,7 @@ const metadata: Metadata = {
       url: "/logo-square.svg",
       alt: "LOGO",
     },
+    siteName: "Runkang10",
     title: {
       template: "Runkang10 | %s",
       default: "Runkang10",
@@ -52,6 +54,11 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("antialiased", fontSans.variable, "font-mono", jetbrainsMono.variable)}
     >
+      <head>
+        <script type="application/json" id="discord:component-embed">
+          {generateDiscordMetadata()}
+        </script>
+      </head>
       <body className="flex min-h-screen flex-col">
         <ThemeProvider attribute="class" defaultTheme="dark">
           <Navbar />
