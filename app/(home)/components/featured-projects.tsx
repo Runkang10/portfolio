@@ -8,7 +8,8 @@ const FeaturedProjectsComponent = () => (
     title="Featured Projects"
     description={
       <span>
-        Full list of projects available on <DefaultLink href="/projects">projects</DefaultLink>.
+        Full list of projects available on <DefaultLink href="/projects">projects</DefaultLink>{" "}
+        page.
       </span>
     }
   >
