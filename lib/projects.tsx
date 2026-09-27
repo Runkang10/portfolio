@@ -1,7 +1,5 @@
-import { ReactNode } from "react"
-
 type ProjectLink = {
-  content: ReactNode
+  content: string
   href: string
   variant: "default" | "outline"
 }
