@@ -1,6 +1,6 @@
 import { FeaturedProjectsData } from "@/lib/projects"
 
-const template = {
+const defaultTemplate = {
   component: {
     type: 17,
     accent_color: null,
@@ -20,24 +20,29 @@ const template = {
         components: [
           {
             type: 10,
-            content: "Hi, I'm Runkang10, a Minecraft plugin developer.",
+            content: "# Runkang10\nHi, I'm Runkang10, a Minecraft plugin developer.",
           },
         ],
       },
-      {
-        type: 14,
-        divider: true,
-        spacing: 1,
-      },
+    ],
+  },
+}
+
+const projectsTemplate = {
+  component: {
+    type: 17,
+    accent_color: null,
+    spoiler: false,
+    components: [
       {
         type: 10,
         content:
-          "# Featured Projects\nFull list of projects available on [projects](https://runkang10.is-a.dev/projects) page.\n{{ projects }}",
+          "# Featured Projects\nFull list of projects available on [projects](https://runkang10.is-a.dev/projects) page.{{ projects }}",
       },
       {
         type: 14,
         divider: true,
-        spacing: 1,
+        spacing: 2,
       },
       {
         type: 1,
@@ -72,12 +77,16 @@ const template = {
   },
 }
 
-function generateDiscordMetadata() {
-  const snapshot = structuredClone(template)
+function generateDefaultDiscordMetadata() {
+  return JSON.stringify(defaultTemplate)
+}
+
+function generateProjectsDiscordMetadata() {
+  const snapshot = structuredClone(projectsTemplate)
   const projectsTemplateContent = snapshot.component.components[2].content!
   const formattedProjectsContent = FeaturedProjectsData.map((project) => {
     const links = project.links.map((link) => `[${link.content}](${link.href})`).join("\n")
-    return `## ${project.name}\n${project.description}\n### Links\n${links}`
+    return `\n## ${project.name}\n${project.description}\n### Links\n${links}`
   })
   snapshot.component.components[2].content = projectsTemplateContent.replace(
     "{{ projects }}",
@@ -86,4 +95,4 @@ function generateDiscordMetadata() {
   return JSON.stringify(snapshot)
 }
 
-export { generateDiscordMetadata }
+export { generateDefaultDiscordMetadata, generateProjectsDiscordMetadata }
