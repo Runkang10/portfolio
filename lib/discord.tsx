@@ -24,34 +24,10 @@ const defaultTemplate = {
           },
         ],
       },
-    ],
-  },
-}
-
-const projectsTemplate = {
-  component: {
-    type: 17,
-    accent_color: null,
-    spoiler: false,
-    components: [
-      {
-        type: 10,
-        content:
-          "# Featured Projects\nFull list of projects available on [projects](https://runkang10.is-a.dev/projects) page.",
-      },
       {
         type: 14,
-        divider: true,
-        spacing: 2,
-      },
-      {
-        type: 10,
-        content: "{{ projects }}",
-      },
-      {
-        type: 14,
-        divider: true,
-        spacing: 2,
+        divider: false,
+        spacing: 1,
       },
       {
         type: 1,
@@ -81,6 +57,30 @@ const projectsTemplate = {
             url: "https://modrinth.com/user/Runkang10",
           },
         ],
+      },
+    ],
+  },
+}
+
+const projectsTemplate = {
+  component: {
+    type: 17,
+    accent_color: null,
+    spoiler: false,
+    components: [
+      {
+        type: 10,
+        content:
+          "# Featured Projects\nFull list of projects available on [projects](https://runkang10.is-a.dev/projects) page.",
+      },
+      {
+        type: 14,
+        divider: true,
+        spacing: 2,
+      },
+      {
+        type: 10,
+        content: "{{ projects }}",
       },
     ],
   },
