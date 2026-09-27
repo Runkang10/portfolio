@@ -46,10 +46,10 @@ const TechStackData = [
 const TechStackComponent = async () => (
   <Section title="Tech Stack">
     <div className="relative flex flex-wrap justify-center">
-      <Marquee repeat={2} className="[--duration:10s]">
+      <Marquee pauseOnHover repeat={2} className="[--duration:10s]">
         {TechStackData.map(({ name, icon: Icon, color }) => (
-          <div key={name} className="rounded-xl bg-card p-8">
-            <Icon size={128} color={color} />
+          <div key={name} className="rounded-xl bg-card p-6 md:p-8">
+            <Icon className="size-16 md:size-24" color={color} />
           </div>
         ))}
       </Marquee>
