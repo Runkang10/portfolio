@@ -1,6 +1,7 @@
 import { Section } from "@/app/(home)/components/section"
 import { Box } from "@/components/box"
 import { ProjectsComponent } from "@/components/projects"
+import { generateProjectsDiscordMetadata } from "@/lib/discord"
 import { ProjectsData } from "@/lib/projects"
 
 const ProjectsTypes = [
@@ -21,6 +22,9 @@ const ProjectsTypes = [
 export default function Page() {
   return (
     <Box>
+      <script type="application/json" id="discord:component-embed">
+        {generateProjectsDiscordMetadata()}
+      </script>
       <div className="mt-16">
         <Section title="All Projects">
           {ProjectsTypes.map((projectsType) => (
