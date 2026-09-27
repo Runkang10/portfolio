@@ -83,7 +83,7 @@ function generateDefaultDiscordMetadata() {
 
 function generateProjectsDiscordMetadata() {
   const snapshot = structuredClone(projectsTemplate)
-  const projectsTemplateContent = snapshot.component.components[2].content!
+  const projectsTemplateContent = snapshot.component.components[0].content!
   const formattedProjectsContent = FeaturedProjectsData.map((project) => {
     const links = project.links.map((link) => `[${link.content}](${link.href})`).join("\n")
     return `\n## ${project.name}\n${project.description}\n### Links\n${links}`
