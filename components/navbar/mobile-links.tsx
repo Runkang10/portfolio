@@ -2,7 +2,7 @@
 
 import { MobileLink } from "@/components/navbar/link"
 import { SocialLinksComponent } from "@/components/social-links"
-import { ThemeButton } from "@/components/theme-provider"
+import { ThemeButton } from "@/components/theme-button"
 import { Button } from "@/components/ui/button"
 import {
   Sheet,

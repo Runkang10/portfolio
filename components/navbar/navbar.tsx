@@ -3,7 +3,7 @@ import { DesktopLinks } from "@/components/navbar/desktop-links"
 import { MobileLinks } from "@/components/navbar/mobile-links"
 import { Separator } from "@/components/navbar/separator"
 import { SocialLinksComponent } from "@/components/social-links"
-import { ThemeButton } from "@/components/theme-provider"
+import { ThemeButton } from "@/components/theme-button"
 import { ScrollProgress } from "@/components/ui/scroll-progress"
 import Link from "next/link"
 
