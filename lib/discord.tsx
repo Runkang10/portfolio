@@ -37,7 +37,16 @@ const projectsTemplate = {
       {
         type: 10,
         content:
-          "# Featured Projects\nFull list of projects available on [projects](https://runkang10.is-a.dev/projects) page.{{ projects }}",
+          "# Featured Projects\nFull list of projects available on [projects](https://runkang10.is-a.dev/projects) page.",
+      },
+      {
+        type: 14,
+        divider: true,
+        spacing: 2,
+      },
+      {
+        type: 10,
+        content: "{{ projects }}",
       },
       {
         type: 14,
@@ -83,12 +92,12 @@ function generateDefaultDiscordMetadata() {
 
 function generateProjectsDiscordMetadata() {
   const snapshot = structuredClone(projectsTemplate)
-  const projectsTemplateContent = snapshot.component.components[0].content!
+  const projectsTemplateContent = snapshot.component.components[2].content!
   const formattedProjectsContent = FeaturedProjectsData.map((project) => {
     const links = project.links.map((link) => `[${link.content}](${link.href})`).join("\n")
-    return `\n## ${project.name}\n${project.description}\n### Links\n${links}`
+    return `## ${project.name}\n${project.description}\n### Links\n${links}`
   })
-  snapshot.component.components[0].content = projectsTemplateContent.replace(
+  snapshot.component.components[2].content = projectsTemplateContent.replace(
     "{{ projects }}",
     formattedProjectsContent.join("\n"),
   )
