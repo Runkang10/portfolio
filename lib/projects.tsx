@@ -3,6 +3,7 @@ import { ReactNode } from "react"
 type ProjectLink = {
   content: ReactNode
   href: string
+  variant: "default" | "outline"
 }
 
 type Project = {
@@ -28,10 +29,12 @@ const ProjectsData: ProjectsMap = {
         {
           content: "Download",
           href: "https://modrinth.com/plugin/atomiccrash",
+          variant: "default",
         },
         {
           content: "Source code",
           href: "https://github.com/Runkang10/AtomicCrash",
+          variant: "outline",
         },
       ],
     },
@@ -43,10 +46,12 @@ const ProjectsData: ProjectsMap = {
         {
           content: "Download",
           href: "https://modrinth.com/plugin/atomicfreeze",
+          variant: "default",
         },
         {
           content: "Source code",
           href: "https://github.com/Runkang10/AtomicFreeze",
+          variant: "outline",
         },
       ],
     },
@@ -59,10 +64,12 @@ const ProjectsData: ProjectsMap = {
         {
           content: "Download",
           href: "https://modrinth.com/plugin/fixedgamemode",
+          variant: "default",
         },
         {
           content: "Source code",
           href: "https://github.com/Runkang10/FixedGameMode",
+          variant: "outline",
         },
       ],
     },
@@ -77,6 +84,7 @@ const ProjectsData: ProjectsMap = {
         {
           content: "Source code",
           href: "https://github.com/Runkang10/compact-mono",
+          variant: "default",
         },
       ],
     },
@@ -90,20 +98,15 @@ const ProjectsData: ProjectsMap = {
         {
           content: "Source code",
           href: "https://github.com/Runkang10/portfolio",
+          variant: "default",
         },
       ],
     },
   ],
 }
 
-const AllProjectsData = [
-  ...ProjectsData.minecraft,
-  ...ProjectsData.libraries,
-  ...ProjectsData.others,
-]
-
 const FeaturedProjectsData = ProjectsData.minecraft
 
-export { ProjectsData, AllProjectsData, FeaturedProjectsData }
+export { ProjectsData, FeaturedProjectsData }
 
 export type { Project, ProjectLink }

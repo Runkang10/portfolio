@@ -15,16 +15,11 @@ const ProjectsComponent = ({ projects }: { projects: Project[] }) => (
           </CardHeader>
           <CardFooter>
             <ul className="flex flex-1 flex-row flex-wrap items-center gap-4">
-              <li>
-                <Link href={`/projects/${project.slug}`} className={buttonVariants({ size: "lg" })}>
-                  View project
-                </Link>
-              </li>
               {project.links.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={buttonVariants({ variant: "outline", size: "lg" })}
+                    className={buttonVariants({ variant: link.variant, size: "lg" })}
                   >
                     {link.content}
                     <RiArrowRightUpLine />
