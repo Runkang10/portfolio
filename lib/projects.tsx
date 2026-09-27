@@ -12,7 +12,7 @@ type Project = {
   links: ProjectLink[]
 }
 
-const Projects: Project[] = [
+const ProjectsData: Project[] = [
   {
     slug: "atomiccrash",
     name: "AtomicCrash",
@@ -60,6 +60,6 @@ const Projects: Project[] = [
   },
 ]
 
-const FeaturedProjectsData: Project[] = Projects
+const FeaturedProjectsData: Project[] = ProjectsData
 
-export { FeaturedProjectsData }
+export { ProjectsData, FeaturedProjectsData }
