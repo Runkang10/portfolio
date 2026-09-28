@@ -91,7 +91,7 @@ const ProjectsData: ProjectsMap = {
     {
       slug: "portfolio",
       name: "portfolio",
-      description: "The current portfolio.",
+      description: "My current portfolio site.",
       links: [
         {
           content: "Source code",
