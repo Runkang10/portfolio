@@ -3,6 +3,7 @@ import { Box } from "@/components/box"
 import { ProjectsComponent } from "@/components/projects"
 import { generateProjectsDiscordMetadata } from "@/lib/discord"
 import { ProjectsData } from "@/lib/projects"
+import type { Metadata } from "next"
 
 const ProjectsTypes = [
   {
@@ -18,6 +19,11 @@ const ProjectsTypes = [
     component: <ProjectsComponent projects={ProjectsData.others} />,
   },
 ]
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "Check out my projects!",
+}
 
 export default function Page() {
   return (
