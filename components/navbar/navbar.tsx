@@ -9,7 +9,7 @@ import Link from "next/link"
 
 const Navbar = () => (
   <nav className="sticky top-0 right-0 left-0 z-40 flex w-screen flex-col md:px-10 md:pt-8">
-    <div className="relative flex flex-1 flex-row items-center gap-4 overflow-hidden border bg-background p-4 md:rounded-xl">
+    <div className="relative flex flex-1 flex-row items-center gap-4 overflow-hidden border-b bg-background p-4 md:rounded-xl md:border">
       <Link href="/">
         <Brand />
       </Link>
