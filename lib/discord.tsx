@@ -12,7 +12,6 @@ const defaultTemplate = {
           type: 11,
           media: {
             url: "https://runkang10.is-a.dev/logo-circle.png",
-            proxy_url: "https://runkang10.is-a.dev/logo-circle.png",
           },
           description: null,
           spoiler: false,

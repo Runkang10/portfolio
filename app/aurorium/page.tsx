@@ -15,8 +15,6 @@ const data = JSON.stringify({
           type: 11,
           media: {
             url: "https://cdn.modrinth.com/data/Wbt6FT7Y/54c5cf996721932f3f1db48e42d9cf0e11a6a751.png",
-            proxy_url:
-              "https://cdn.modrinth.com/data/Wbt6FT7Y/54c5cf996721932f3f1db48e42d9cf0e11a6a751.png",
           },
           description: null,
           spoiler: false,
