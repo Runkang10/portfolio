@@ -35,7 +35,7 @@ const data = JSON.stringify({
       {
         type: 10,
         content:
-          "## How to join\n### Requirements\n- Minecraft Java Edition\n- Minecraft version between 1.21.11 and 26.3 (26.3 is recommended)\n\n### IP\nIP 1: `134.255.232.108:25000`\nIP 2: `n4.ecli.app:25000`\nLocation: Europe",
+          "## How to join\n### Requirements\n- Minecraft Java Edition\n- Minecraft version between 1.21.11 and 26.3 (26.3 is recommended)\n### IP\nIP 1: `134.255.232.108:25000`\nIP 2: `n4.ecli.app:25000`\nLocation: Europe",
       },
       {
         type: 14,
