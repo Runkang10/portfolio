@@ -71,29 +71,31 @@ const data = JSON.stringify({
 
 export default function Page() {
   return (
-    <Box>
+    <>
       <script type="application/json" id="discord:component-embed">
         {data}
       </script>
-      <div className="flex flex-1 justify-center">
-        <div className="mt-64 flex flex-col gap-4 text-center">
-          <h1 className="text-5xl font-bold">Aurorium SMP</h1>
-          <div className="flex flex-row items-center justify-center gap-4">
-            <Link
-              href="https://discord.gg/gesaS7aKKy"
-              className={buttonVariants({ variant: "secondary", size: "lg" })}
-            >
-              Discord <RiArrowRightUpLine />
-            </Link>
-            <Link
-              href="https://modrinth.com/server/aurorium"
-              className={buttonVariants({ variant: "secondary", size: "lg" })}
-            >
-              Modrinth <RiArrowRightUpLine />
-            </Link>
+      <Box>
+        <div className="flex flex-1 justify-center">
+          <div className="mt-64 flex flex-col gap-4 text-center">
+            <h1 className="text-5xl font-bold">Aurorium SMP</h1>
+            <div className="flex flex-row items-center justify-center gap-4">
+              <Link
+                href="https://discord.gg/gesaS7aKKy"
+                className={buttonVariants({ variant: "secondary", size: "lg" })}
+              >
+                Discord <RiArrowRightUpLine />
+              </Link>
+              <Link
+                href="https://modrinth.com/server/aurorium"
+                className={buttonVariants({ variant: "secondary", size: "lg" })}
+              >
+                Modrinth <RiArrowRightUpLine />
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-    </Box>
+      </Box>
+    </>
   )
 }
