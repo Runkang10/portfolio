@@ -22,7 +22,7 @@ const ProjectsData: ProjectsMap = {
     {
       slug: "atomiccrash",
       name: "AtomicCrash",
-      description: "Crash players Minecraft instance with a single command.",
+      description: "A Minecraft plugin crash players with a single command.",
       links: [
         {
           content: "Download",
@@ -39,7 +39,7 @@ const ProjectsData: ProjectsMap = {
     {
       slug: "atomicfreeze",
       name: "AtomicFreeze",
-      description: "Ignore players packet or stop sending packets to players entirely.",
+      description: "A Minecraft plugin that ignore players packet or stop sending packets to players entirely.",
       links: [
         {
           content: "Download",
@@ -57,7 +57,7 @@ const ProjectsData: ProjectsMap = {
       slug: "fixedgamemode",
       name: "FixedGameMode",
       description:
-        "Makes the game mode switcher permission based instead of traditional OP levels.",
+        "A Minecraft plugin that makes the game mode switcher permission based instead of traditional OP levels.",
       links: [
         {
           content: "Download",
@@ -74,14 +74,14 @@ const ProjectsData: ProjectsMap = {
   ],
   libraries: [
     {
-      slug: "compact-mono",
-      name: "compact-mono",
+      slug: "compact-lib",
+      name: "compact-lib",
       description:
         "A library with collection of Kotlin extensions of Paper API and implementations for my paper plugins.",
       links: [
         {
           content: "Source code",
-          href: "https://github.com/Runkang10/compact-mono",
+          href: "https://github.com/Runkang10/compact-lib",
           variant: "default",
         },
       ],
